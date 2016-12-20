@@ -5,20 +5,21 @@ import java.io.Serializable;
 public class JsonResultWrapper<T> implements Serializable {
     private static final long serialVersionUID = -4699713095477151086L;
 
-    /**
-     * 数据
-     */
-    private T data;
-    /**
-     * 信息
-     */
-    private String message;
-    /**
-     * 是否成功
-     */
-    private boolean success;
 
-    public Object getData() {
+    private T data;
+    private String message;
+    private boolean success;
+    private int errcode;
+
+    public int getErrcode() {
+		return errcode;
+	}
+
+	public void setErrcode(int errcode) {
+		this.errcode = errcode;
+	}
+
+	public Object getData() {
         return data;
     }
 
@@ -65,5 +66,7 @@ public class JsonResultWrapper<T> implements Serializable {
     public JsonResultWrapper(T data) {
         this.data = data;
         this.success = true;
+        this.message = "ok";
+        this.errcode = 0;
     }
 }  

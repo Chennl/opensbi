@@ -67,7 +67,6 @@ public class ApiAuthorizationController {
 		       return mav;
 		}
 	 @RequestMapping("/accesstoken")
-
 	 public ResponseEntity<String> accessToken(HttpServletRequest request) throws OAuthSystemException, OAuthProblemException{
 		//构建OAuth请求
 	       OAuthTokenRequest tokenRequest = new OAuthTokenRequest(request);

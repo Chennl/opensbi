@@ -3,11 +3,12 @@ package com.swirebev.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.codehaus.jackson.map.ObjectMapper;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.swirebev.pojo.JsonResultWrapper;
 
 public class ApiSecurityInterceptor extends HandlerInterceptorAdapter {
