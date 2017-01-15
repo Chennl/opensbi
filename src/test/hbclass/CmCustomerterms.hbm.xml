@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CmCustomerterms" table="cm_customerterms" catalog="opendb" optimistic-lock="version">
+        <id name="outletNo" type="string">
+            <column name="outlet_no" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="taxRegCode" type="string">
+            <column name="tax_reg_code" length="20" />
+        </property>
+        <property name="bankKey" type="string">
+            <column name="bank_key" length="15" />
+        </property>
+        <property name="bankAccount" type="string">
+            <column name="bank_account" length="30" />
+        </property>
+        <property name="accountHolder" type="string">
+            <column name="account_holder" length="60" />
+        </property>
+        <property name="reconAccount" type="string">
+            <column name="recon_account" length="10" />
+        </property>
+        <property name="sortKey" type="string">
+            <column name="sort_key" length="3" />
+        </property>
+        <property name="paymentMethods" type="string">
+            <column name="payment_methods" length="10" />
+        </property>
+        <property name="priceListNo" type="string">
+            <column name="price_list_no" length="2" />
+        </property>
+        <property name="invoiceTitleCode" type="string">
+            <column name="invoice_title_code" length="3" />
+        </property>
+        <property name="tradeName" type="string">
+            <column name="trade_name" length="10" not-null="true" />
+        </property>
+        <property name="costCenter" type="string">
+            <column name="cost_center" length="10" />
+        </property>
+        <property name="checkIndicator" type="string">
+            <column name="check_indicator" length="1" />
+        </property>
+        <property name="paymentDate" type="string">
+            <column name="payment_date" length="2" />
+        </property>
+        <property name="billingDate" type="string">
+            <column name="billing_date" length="2" />
+        </property>
+        <property name="countingDate" type="string">
+            <column name="counting_date" length="2" />
+        </property>
+        <property name="printBilling" type="string">
+            <column name="print_billing" length="1" />
+        </property>
+        <property name="invoicePrint" type="string">
+            <column name="invoice_print" length="2" />
+        </property>
+        <property name="invoiceType" type="string">
+            <column name="invoice_type" length="1" />
+        </property>
+        <property name="rebateMethods" type="string">
+            <column name="rebate_methods" length="1" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="20" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

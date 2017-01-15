@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CmCustomercontact" table="cm_customercontact" catalog="opendb" optimistic-lock="version">
+        <id name="outletNo" type="string">
+            <column name="outlet_no" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="phone1" type="string">
+            <column name="phone1" length="30" />
+        </property>
+        <property name="phone2" type="string">
+            <column name="phone2" length="30" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="30" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="241" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="35" />
+        </property>
+        <property name="supervisor" type="string">
+            <column name="supervisor" length="40" />
+        </property>
+        <property name="supervisorCard" type="string">
+            <column name="supervisor_card" length="20" />
+        </property>
+        <property name="customerBirthday" type="date">
+            <column name="customer_birthday" length="10" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="20" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

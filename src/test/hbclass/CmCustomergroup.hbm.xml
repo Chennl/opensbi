@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CmCustomergroup" table="cm_customergroup" catalog="opendb" optimistic-lock="version">
+        <id name="outletNo" type="string">
+            <column name="outlet_no" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="marketSegmentCode" type="string">
+            <column name="market_segment_code" length="3" />
+        </property>
+        <property name="businessTypeCode" type="string">
+            <column name="business_type_code" length="2" />
+        </property>
+        <property name="businessTypeExtens" type="string">
+            <column name="business_type_extens" length="2" />
+        </property>
+        <property name="channelCode" type="string">
+            <column name="channel_code" length="3" />
+        </property>
+        <property name="subChannelCode" type="string">
+            <column name="sub_channel_code" length="3" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="location_code" length="4" not-null="true" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="5" not-null="true" />
+        </property>
+        <property name="custPriceProc" type="string">
+            <column name="cust_price_proc" length="1" not-null="true" />
+        </property>
+        <property name="delLocationCode" type="string">
+            <column name="del_location_code" length="4" not-null="true" />
+        </property>
+        <property name="invoicingDates" type="string">
+            <column name="invoicing_dates" length="2" not-null="true" />
+        </property>
+        <property name="invoicinglistDates" type="string">
+            <column name="invoicinglist_dates" length="2" not-null="true" />
+        </property>
+        <property name="paymentTerms" type="string">
+            <column name="payment_terms" length="4" not-null="true" />
+        </property>
+        <property name="accountAssignmentGroup" type="string">
+            <column name="account_assignment_group" length="2" />
+        </property>
+        <property name="taxClassification" type="string">
+            <column name="tax_classification" length="1" />
+        </property>
+        <property name="marketChannel" type="string">
+            <column name="market_channel" length="3" />
+        </property>
+        <property name="statusCode" type="string">
+            <column name="status_code" length="2" not-null="true" />
+        </property>
+        <property name="tradeChannel" type="string">
+            <column name="trade_channel" length="3" not-null="true" />
+        </property>
+        <property name="psRoute" type="string">
+            <column name="ps_route" length="4" />
+        </property>
+        <property name="serviceTrade" type="string">
+            <column name="service_trade" length="3" not-null="true" />
+        </property>
+        <property name="serviceIndicator" type="string">
+            <column name="service_indicator" length="1" />
+        </property>
+        <property name="servicePrice" type="string">
+            <column name="service_price" length="5" />
+        </property>
+        <property name="serviceZone" type="string">
+            <column name="service_zone" length="7" />
+        </property>
+        <property name="bottleCasePayment" type="string">
+            <column name="bottle_case_payment" length="1" />
+        </property>
+        <property name="bottleCaseMethods" type="string">
+            <column name="bottle_case_methods" length="10" />
+        </property>
+        <property name="topIndicator" type="string">
+            <column name="top_indicator" length="1" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="20" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="20" not-null="true" />
+        </property>
+        <property name="actDelLocationCode" type="string">
+            <column name="act_del_location_code" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>

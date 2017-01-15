@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CmCustomerlogistics" table="cm_customerlogistics" catalog="opendb" optimistic-lock="version">
+        <id name="outletNo" type="string">
+            <column name="outlet_no" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="floor" type="string">
+            <column name="floor" length="10" />
+        </property>
+        <property name="unloadingPoint" type="string">
+            <column name="unloading_point" length="25" />
+        </property>
+        <property name="unloadingPointDefault" type="string">
+            <column name="unloading_point_default" length="1" />
+        </property>
+        <property name="deliveryPriority" type="java.lang.Integer">
+            <column name="delivery_priority" />
+        </property>
+        <property name="delDelayDay" type="string">
+            <column name="del_delay_day" length="2" />
+        </property>
+        <property name="roadShow" type="string">
+            <column name="road_show" length="1" not-null="true" />
+        </property>
+        <property name="directIndicator" type="string">
+            <column name="direct_indicator" length="1" not-null="true" />
+        </property>
+        <property name="storeSpace" type="string">
+            <column name="store_space" length="1" />
+        </property>
+        <property name="consignee" type="string">
+            <column name="consignee" length="40" />
+        </property>
+        <property name="driverMsgcode" type="string">
+            <column name="driver_msgcode" length="2" />
+        </property>
+        <property name="deliveryLimit" type="string">
+            <column name="delivery_limit" length="1" />
+        </property>
+        <property name="deliveryDocPrint" type="string">
+            <column name="delivery_doc_print" length="1" not-null="true" />
+        </property>
+        <property name="batchPrint" type="string">
+            <column name="batch_print" length="1" />
+        </property>
+        <property name="longtitude" type="string">
+            <column name="longtitude" length="11" />
+        </property>
+        <property name="latitude" type="string">
+            <column name="latitude" length="11" />
+        </property>
+        <property name="canDirectCapability" type="string">
+            <column name="can_direct_capability" length="1" />
+        </property>
+        <property name="loadStaff" type="string">
+            <column name="load_staff" length="1" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="20" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

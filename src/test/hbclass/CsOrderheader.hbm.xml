@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CsOrderheader" table="cs_orderheader" catalog="opendb" optimistic-lock="version">
+        <id name="tranCode" type="string">
+            <column name="tran_code" length="36" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="sbiTranCode" type="string">
+            <column name="sbi_tran_code" length="36" not-null="true" />
+        </property>
+        <property name="docCode" type="string">
+            <column name="doc_code" length="36" not-null="true" />
+        </property>
+        <property name="orderType" type="string">
+            <column name="order_type" length="4" />
+        </property>
+        <property name="usageCode" type="string">
+            <column name="usage_code" length="3" />
+        </property>
+        <property name="shipmentCode" type="string">
+            <column name="shipment_code" length="10" not-null="true" />
+        </property>
+        <property name="outletNoSoldto" type="string">
+            <column name="outlet_no_soldto" length="10" not-null="true" />
+        </property>
+        <property name="outletNoShipto" type="string">
+            <column name="outlet_no_shipto" length="10" not-null="true" />
+        </property>
+        <property name="deliveryType" type="string">
+            <column name="delivery_type" length="5" />
+        </property>
+        <property name="deliveryTypeDesc" type="string">
+            <column name="delivery_type_desc" length="50" />
+        </property>
+        <property name="paymentTerms" type="string">
+            <column name="payment_terms" length="4" not-null="true" />
+        </property>
+        <property name="delLocationCode" type="string">
+            <column name="del_location_code" length="4" not-null="true" />
+        </property>
+        <property name="storageLocation" type="string">
+            <column name="storage_location" length="4" />
+        </property>
+        <property name="deliveryDate" type="timestamp">
+            <column name="delivery_date" length="19" not-null="true" />
+        </property>
+        <property name="callingDate" type="timestamp">
+            <column name="calling_date" length="19" />
+        </property>
+        <property name="productTotal" type="float">
+            <column name="product_total" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="emptyTotal" type="float">
+            <column name="empty_total" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="pricingDate" type="timestamp">
+            <column name="pricing_date" length="19" />
+        </property>
+        <property name="staffCode" type="string">
+            <column name="staff_code" length="10" />
+        </property>
+        <property name="salesRouteCode" type="string">
+            <column name="sales_route_code" length="4" />
+        </property>
+        <property name="directshipResult" type="java.lang.Integer">
+            <column name="directship_result" />
+        </property>
+        <property name="autoreleaseType" type="java.lang.Integer">
+            <column name="autorelease_type" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="30" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="30" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="syncDate" type="timestamp">
+            <column name="sync_date" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

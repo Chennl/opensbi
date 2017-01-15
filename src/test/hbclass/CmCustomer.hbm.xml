@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CmCustomer" table="cm_customer" catalog="opendb" optimistic-lock="version">
+        <id name="outletNo" type="string">
+            <column name="outlet_no" length="16" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="accountGroup" type="string">
+            <column name="account_group" length="4" />
+        </property>
+        <property name="salesOrganization" type="string">
+            <column name="sales_organization" length="4" />
+        </property>
+        <property name="distributionChannel" type="string">
+            <column name="distribution_channel" length="2" />
+        </property>
+        <property name="division" type="string">
+            <column name="division" length="2" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="30" />
+        </property>
+        <property name="nameE" type="string">
+            <column name="name_e" length="40" />
+        </property>
+        <property name="addressE1" type="string">
+            <column name="address_e1" length="40" />
+        </property>
+        <property name="postalCode" type="string">
+            <column name="postal_code" length="10" not-null="true" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="3" />
+        </property>
+        <property name="region" type="string">
+            <column name="region" length="3" />
+        </property>
+        <property name="transportationZone" type="string">
+            <column name="transportation_zone" length="10" not-null="true" />
+        </property>
+        <property name="basisOutletNo" type="string">
+            <column name="basis_outlet_no" length="25" />
+        </property>
+        <property name="townCode" type="string">
+            <column name="town_code" length="10" />
+        </property>
+        <property name="cityCode" type="string">
+            <column name="city_code" length="4" />
+        </property>
+        <property name="regionCode" type="string">
+            <column name="region_code" length="6" />
+        </property>
+        <property name="suppressCode" type="string">
+            <column name="suppress_code" length="2" />
+        </property>
+        <property name="healthLicenseNumber" type="string">
+            <column name="health_license_number" length="30" />
+        </property>
+        <property name="healthLicenseStart" type="date">
+            <column name="health_license_start" length="10" />
+        </property>
+        <property name="healthLicenseEnd" type="date">
+            <column name="health_license_end" length="10" />
+        </property>
+        <property name="license" type="string">
+            <column name="license" length="15" />
+        </property>
+        <property name="licenseStart" type="date">
+            <column name="license_start" length="10" />
+        </property>
+        <property name="licenseEnd" type="date">
+            <column name="license_end" length="10" />
+        </property>
+        <property name="basisCreateDate" type="timestamp">
+            <column name="basis_create_date" length="19" />
+        </property>
+        <property name="sapCreateDate" type="timestamp">
+            <column name="sap_create_date" length="19" />
+        </property>
+        <property name="deletionBlocks" type="string">
+            <column name="deletion_blocks" length="1" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="20" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="20" not-null="true" />
+        </property>
+        <property name="pztCode" type="char">
+            <column name="pzt_code" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

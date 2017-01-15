@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.AmArticlemaster" table="am_articlemaster" catalog="opendb" optimistic-lock="version">
+        <id name="articleNo" type="string">
+            <column name="article_no" length="18" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoryCode" type="string">
+            <column name="category_code" length="3" />
+        </property>
+        <property name="brandCode" type="string">
+            <column name="brand_code" length="3" />
+        </property>
+        <property name="brandOwner" type="string">
+            <column name="brand_owner" length="2" />
+        </property>
+        <property name="carbonationIndicator" type="string">
+            <column name="carbonation_indicator" length="1" />
+        </property>
+        <property name="flavorCode" type="string">
+            <column name="flavor_code" length="10" />
+        </property>
+        <property name="phyStateCode" type="string">
+            <column name="phy_state_code" length="2" />
+        </property>
+        <property name="tradeMark" type="string">
+            <column name="trade_mark" length="3" />
+        </property>
+        <property name="calorieIndicator" type="string">
+            <column name="calorie_indicator" length="1" />
+        </property>
+        <property name="packageCode" type="string">
+            <column name="package_code" length="6" />
+        </property>
+        <property name="packageSize" type="string">
+            <column name="package_size" length="3" />
+        </property>
+        <property name="packageTypeCode" type="string">
+            <column name="package_type_code" length="3" />
+        </property>
+        <property name="returnablePackaging" type="string">
+            <column name="returnable_packaging" length="1" />
+        </property>
+        <property name="rtdIndicator" type="string">
+            <column name="rtd_indicator" length="1" />
+        </property>
+        <property name="beverageType" type="string">
+            <column name="beverage_type" length="2" />
+        </property>
+        <property name="beverageProduct" type="string">
+            <column name="beverage_product" length="4" />
+        </property>
+        <property name="nameShortC" type="string">
+            <column name="name_short_c" length="12" />
+        </property>
+        <property name="nameE" type="string">
+            <column name="name_e" />
+        </property>
+        <property name="nameC" type="string">
+            <column name="name_c" length="40" />
+        </property>
+        <property name="weightPerCase" type="big_decimal">
+            <column name="weight_per_case" precision="13" scale="3" />
+        </property>
+        <property name="weightUnit" type="string">
+            <column name="weight_unit" length="3" />
+        </property>
+        <property name="netWeight" type="big_decimal">
+            <column name="net_weight" precision="13" scale="3" />
+        </property>
+        <property name="volumePerCase" type="big_decimal">
+            <column name="volume_per_case" precision="13" scale="3" />
+        </property>
+        <property name="basisMaterialNumber" type="string">
+            <column name="basis_material_number" length="18" />
+        </property>
+        <property name="materialGroup" type="string">
+            <column name="material_group" length="9" />
+        </property>
+        <property name="measureBaseUnit" type="string">
+            <column name="measure_base_unit" length="3" />
+        </property>
+        <property name="genItemCatGrp" type="string">
+            <column name="gen_item_cat_grp" length="4" />
+        </property>
+        <property name="division" type="string">
+            <column name="division" length="2" />
+        </property>
+        <property name="industrySector" type="string">
+            <column name="industry_sector" length="1" />
+        </property>
+        <property name="materialType" type="string">
+            <column name="material_type" length="4" />
+        </property>
+        <property name="salesOrganization" type="string">
+            <column name="sales_organization" length="4" />
+        </property>
+        <property name="distributionChannel" type="string">
+            <column name="distribution_channel" length="3" />
+        </property>
+        <property name="storageBin" type="string">
+            <column name="storage_bin" length="10" />
+        </property>
+        <property name="totalShelfLife" type="java.lang.Integer">
+            <column name="total_shelf_life" />
+        </property>
+        <property name="dmeMarketMarterial" type="string">
+            <column name="dme_market_marterial" length="1" />
+        </property>
+        <property name="barCode" type="string">
+            <column name="bar_code" length="50" />
+        </property>
+        <property name="availabilityCheck" type="string">
+            <column name="availability_check" length="2" />
+        </property>
+        <property name="distrProfile" type="string">
+            <column name="distr_profile" length="3" />
+        </property>
+        <property name="loadingGrp" type="string">
+            <column name="loading_grp" length="4" />
+        </property>
+        <property name="transGrp" type="string">
+            <column name="trans_grp" length="4" />
+        </property>
+        <property name="baseQty" type="big_decimal">
+            <column name="base_qty" precision="13" scale="3" />
+        </property>
+        <property name="deliveringPlant" type="string">
+            <column name="delivering_plant" length="4" />
+        </property>
+        <property name="cashDiscountIndicator" type="string">
+            <column name="cash_discount_indicator" length="1" />
+        </property>
+        <property name="minOrderQty" type="big_decimal">
+            <column name="min_order_qty" precision="13" scale="3" />
+        </property>
+        <property name="minDelyQty" type="big_decimal">
+            <column name="min_dely_qty" precision="13" scale="3" />
+        </property>
+        <property name="measureUnit" type="string">
+            <column name="measure_unit" length="3" />
+        </property>
+        <property name="deliveryUnit" type="big_decimal">
+            <column name="delivery_unit" precision="13" scale="3" />
+        </property>
+        <property name="departureCountry" type="string">
+            <column name="departure_country" length="3" />
+        </property>
+        <property name="countryName" type="string">
+            <column name="country_name" length="15" />
+        </property>
+        <property name="taxCategory1" type="string">
+            <column name="tax_category1" length="4" />
+        </property>
+        <property name="taxClassification" type="string">
+            <column name="tax_classification" length="1" />
+        </property>
+        <property name="accAssignmentGrp" type="string">
+            <column name="acc_assignment_grp" length="2" />
+        </property>
+        <property name="itemCategoryGroup" type="string">
+            <column name="item_category_group" length="4" />
+        </property>
+        <property name="matlSatisticsGrp" type="string">
+            <column name="matl_satistics_grp" length="1" />
+        </property>
+        <property name="plMarterial" type="string">
+            <column name="pl_marterial" length="18" />
+        </property>
+        <property name="plQty" type="java.lang.Integer">
+            <column name="pl_qty" />
+        </property>
+        <property name="promotionalIndicator" type="string">
+            <column name="promotional_indicator" length="50" />
+        </property>
+        <property name="deleteFlag" type="string">
+            <column name="delete_flag" length="1" />
+        </property>
+        <property name="swireBrand" type="string">
+            <column name="swire_brand" length="4" not-null="true" />
+        </property>
+        <property name="swirePackagegroup" type="string">
+            <column name="swire_packagegroup" length="4" not-null="true" />
+        </property>
+        <property name="swireBrandGroup" type="string">
+            <column name="swire_brand_group" length="4" not-null="true" />
+        </property>
+        <property name="positiveMaterialCode" type="string">
+            <column name="positive_material_code" length="18" />
+        </property>
+        <property name="materialDesc" type="string">
+            <column name="material_desc" length="200" />
+        </property>
+        <property name="supplierMaterialCode" type="string">
+            <column name="supplier_material_code" length="40" />
+        </property>
+        <property name="consumptionType" type="string">
+            <column name="consumption_type" length="2" />
+        </property>
+        <property name="sparePartPurpose" type="string">
+            <column name="spare_part_purpose" length="2" />
+        </property>
+        <property name="sparePartType" type="string">
+            <column name="spare_part_type" length="20" />
+        </property>
+        <property name="sparePartSource" type="string">
+            <column name="spare_part_source" length="40" />
+        </property>
+        <property name="groupCode" type="string">
+            <column name="group_code" length="2" />
+        </property>
+        <property name="basisModelCode" type="string">
+            <column name="basis_model_code" length="10" />
+        </property>
+        <property name="basisModelCodeDesc" type="string">
+            <column name="basis_model_code_desc" length="40" />
+        </property>
+        <property name="materialSubCode" type="string">
+            <column name="material_sub_code" length="3" />
+        </property>
+        <property name="plantMaterialSubCode" type="string">
+            <column name="plant_material_sub_code" length="10" />
+        </property>
+        <property name="supplierDesc" type="string">
+            <column name="supplier_desc" length="40" />
+        </property>
+        <property name="doorCount" type="big_decimal">
+            <column name="door_count" precision="5" scale="3" />
+        </property>
+        <property name="breakEvenPoint" type="big_decimal">
+            <column name="break_even_point" precision="5" scale="3" />
+        </property>
+        <property name="maintPeriod" type="big_decimal">
+            <column name="maint_period" precision="5" scale="3" />
+        </property>
+        <property name="articleSize" type="string">
+            <column name="article_size" length="32" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="20" not-null="true" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

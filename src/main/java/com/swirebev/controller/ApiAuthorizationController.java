@@ -1,4 +1,4 @@
-package com.swirebev.controller;
+/*package com.swirebev.controller;
 
 import java.net.URISyntaxException;
 
@@ -173,3 +173,4 @@ public class ApiAuthorizationController {
 		 return true;
 	 }
 }
+*/

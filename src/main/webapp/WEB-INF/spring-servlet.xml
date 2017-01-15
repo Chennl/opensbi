@@ -13,33 +13,30 @@ xmlns:tx="http://www.springframework.org/schema/tx"
 		 http://www.springframework.org/schema/tx 
          http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-		<!-- 启用spring mvc 注解 -->
-			<mvc:annotation-driven >
+	<!-- 启用spring mvc 注解 -->
+		<mvc:annotation-driven >
 			<mvc:message-converters >
-				<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
 					<property name="supportedMediaTypes" value="text/plain;charset=UTF-8"/>
 				</bean>
 				<bean  class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" >
-				<property name="objectMapper" ref="jodaObjectMapper"/>	
-				   <property name="supportedMediaTypes">
-                    <list>
-                        <value>text/html;charset=UTF-8</value>
-                        <value>application/json</value>
-                    </list>
-                </property>
-				
+					<property name="objectMapper" ref="jodaObjectMapper"/>	
+					   <property name="supportedMediaTypes">
+	                    <list>
+	                        <value>text/html;charset=UTF-8</value>
+	                        <value>application/json</value>
+	                    </list>
+	                </property>				
             	</bean>
 			</mvc:message-converters>
 		</mvc:annotation-driven>
 		<bean id="jodaObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
 		
 		<!-- 设置自动扫描使用注解的类所在的jar包 -->
-		<context:component-scan base-package="com.swirebev.controller"/> 
-        <!-- don't handle the static resource -->    
-        <mvc:default-servlet-handler />       
-        <mvc:resources mapping="/resources/**" location="/resources/" />
-		<!-- 配置视图解析器，即如何把handler方法返回值解析为实际的物理视图 -->    
-		 <bean  id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >      
+		 <context:component-scan base-package="com.swirebev.controller"/>
+
+ 		<!-- 配置视图解析器，即如何把handler方法返回值解析为实际的物理视图 -->    
+		<bean  id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >      
 			<property name="prefix" value="/" />                 
 			<property name="suffix" value=".jsp" />     
 		</bean> 
@@ -51,13 +48,12 @@ xmlns:tx="http://www.springframework.org/schema/tx"
 	    <mvc:resources mapping="/script/**" location="/WEB-INF/script/" />
 
     	<!-- 自定义拦截器 -->
-    	<mvc:interceptors>
+<!--     	<mvc:interceptors>
 				<mvc:interceptor>
 				<mvc:mapping path="/api/**"/>
 					 <bean class="com.swirebev.interceptor.ApiSecurityInterceptor"></bean>
 				</mvc:interceptor>			 
     	</mvc:interceptors>
-    	
+    	 -->
     	<!-- 完成请求和注解POJO的映射 -->
- 		
 </beans>

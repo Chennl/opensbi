@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CsOrderitem" table="cs_orderitem" catalog="opendb" optimistic-lock="version">
+        <composite-id name="id" class="hbclass.CsOrderitemId">
+            <key-property name="tranCode" type="string">
+                <column name="tran_code" length="36" />
+            </key-property>
+            <key-property name="itemNo" type="int">
+                <column name="item_no" />
+            </key-property>
+        </composite-id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="articleNo" type="string">
+            <column name="article_no" length="18" />
+        </property>
+        <property name="cases" type="java.lang.Integer">
+            <column name="cases" />
+        </property>
+        <property name="pieces" type="java.lang.Integer">
+            <column name="pieces" />
+        </property>
+        <property name="usageCode" type="string">
+            <column name="usage_code" length="3" />
+        </property>
+        <property name="productTotal" type="big_decimal">
+            <column name="product_total" precision="11" />
+        </property>
+        <property name="depositTotal" type="big_decimal">
+            <column name="deposit_total" precision="11" />
+        </property>
+        <property name="oninvoiceDiscountTotal" type="big_decimal">
+            <column name="oninvoice_discount_total" precision="11" />
+        </property>
+        <property name="offinvoiceDiscountTotal" type="big_decimal">
+            <column name="offinvoice_discount_total" precision="11" />
+        </property>
+        <property name="freeGoodsFlg" type="java.lang.Character">
+            <column name="free_goods_flg" length="1" />
+        </property>
+        <property name="unit" type="string">
+            <column name="unit" length="3" />
+        </property>
+    </class>
+</hibernate-mapping>

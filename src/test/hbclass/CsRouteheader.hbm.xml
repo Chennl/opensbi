@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 11, 2017 1:51:26 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="hbclass.CsRouteheader" table="cs_routeheader" catalog="opendb" optimistic-lock="version">
+        <id name="shipmentCode" type="string">
+            <column name="shipment_code" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="companyCode" type="string">
+            <column name="company_code" length="4" not-null="true" />
+        </property>
+        <property name="shipmentType" type="string">
+            <column name="shipment_type" length="4" not-null="true" />
+        </property>
+        <property name="shipmentTypeDesc" type="string">
+            <column name="shipment_type_desc" length="40" not-null="true" />
+        </property>
+        <property name="shipmentStatus" type="string">
+            <column name="shipment_status" length="1" not-null="true" />
+        </property>
+        <property name="transportPlanPoint" type="string">
+            <column name="transport_plan_point" length="4" />
+        </property>
+        <property name="delLocationCode" type="string">
+            <column name="del_location_code" length="50" not-null="true" />
+        </property>
+        <property name="delDate" type="timestamp">
+            <column name="del_date" length="19" not-null="true" />
+        </property>
+        <property name="delStatus" type="byte">
+            <column name="del_status" not-null="true" />
+        </property>
+        <property name="delStatusDate" type="timestamp">
+            <column name="del_status_date" length="19" />
+        </property>
+        <property name="phoneNo" type="string">
+            <column name="phone_no" length="20" not-null="true" />
+        </property>
+        <property name="driverNo" type="string">
+            <column name="driver_no" length="20" not-null="true" />
+        </property>
+        <property name="driverName" type="string">
+            <column name="driver_name" length="40" not-null="true" />
+        </property>
+        <property name="setllementLocCode" type="string">
+            <column name="setllement_loc_code" length="4" not-null="true" />
+        </property>
+        <property name="printFlag" type="byte">
+            <column name="print_flag" not-null="true" />
+        </property>
+        <property name="printBy" type="string">
+            <column name="print_by" length="30" />
+        </property>
+        <property name="printDate" type="timestamp">
+            <column name="print_date" length="19" />
+        </property>
+        <property name="confirmStatus" type="byte">
+            <column name="confirm_status" not-null="true" />
+        </property>
+        <property name="confirmDate" type="timestamp">
+            <column name="confirm_date" length="19" />
+        </property>
+        <property name="confirmBy" type="string">
+            <column name="confirm_by" length="30" />
+        </property>
+        <property name="sapReturnStatus" type="string">
+            <column name="sap_return_status" length="1" />
+        </property>
+        <property name="sapReturnMessage" type="string">
+            <column name="sap_return_message" length="60" />
+        </property>
+        <property name="sapCheckinStatus" type="java.lang.Integer">
+            <column name="sap_checkin_status" />
+        </property>
+        <property name="createBy" type="string">
+            <column name="create_by" length="30" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="create_date" length="19" not-null="true" />
+        </property>
+        <property name="updateBy" type="string">
+            <column name="update_by" length="30" />
+        </property>
+        <property name="updateDate" type="timestamp">
+            <column name="update_date" length="19" not-null="true" />
+        </property>
+        <property name="fsvStatus" type="java.lang.Character">
+            <column name="fsv_status" length="1" />
+        </property>
+        <property name="fsvDate" type="timestamp">
+            <column name="fsv_date" length="19" />
+        </property>
+        <property name="checkinRequestNo" type="java.lang.Long">
+            <column name="checkin_request_no" />
+        </property>
+    </class>
+</hibernate-mapping>

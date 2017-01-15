@@ -1,4 +1,4 @@
-package opensbi;
+/*package opensbi;
 
 import org.apache.oltu.oauth2.client.OAuthClient;
 import org.apache.oltu.oauth2.client.URLConnectionClient;
@@ -13,8 +13,8 @@ import org.apache.oltu.oauth2.common.message.types.GrantType;
 
 public class oaut2test {
 	
-/*	客户端
-	获取accessToken代码示例*/
+	客户端
+	获取accessToken代码示例
 	public void getAccessToken() throws OAuthSystemException, OAuthProblemException{
  	OAuthClientRequest request = OAuthClientRequest
 		       //获取accesstoken地址
@@ -54,3 +54,4 @@ public class oaut2test {
 	}
 
 }
+*/
